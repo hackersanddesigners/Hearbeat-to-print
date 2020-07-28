@@ -18,7 +18,7 @@ import processing.serial.*;
 
 
 int pdfW = 210; // width and height of PDF
-int pdfH = 70;
+int pdfH = 297;
 
 // L A Y O U T
 int ws; // white space

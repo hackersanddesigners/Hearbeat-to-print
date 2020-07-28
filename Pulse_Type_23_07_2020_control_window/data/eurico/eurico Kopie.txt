@@ -1,0 +1,67 @@
+How to Generate Distance — Exercises on Ecology and Perception
+Eurico Sá Fernandes
+
+
+In the past years I’ve interests in ecological thinking in relation to perception and the role that technology plays in that realm. The way in which the current instability of Earth’s system brought to a new awareness of other beings and realities that cannot be totally grasped from human perception humans and the relation with the tools that are built to attempt to understand these. I believe this effort expands thinking into a realm where the human is no longer in the centre of world forcing us to think in a third-person perspective – not only in the impact that our actions have on us but on a system that might be outside our direct perception.
+
+Generating Distance is an exercise on ecology and perception, a workshop I run as part of the Hackers and Designers Summer Academy 2019. During the workshop participants are invited to create an action-adventure game played in the real world from a third-person perspective. This workshop seeks to experiment with the constrains that arise when you distant yourself from your centre. By creating a new awareness of the body and surroundings, it opens to new possibilities and understanding.
+In this piece I attempt to analysis the concept framework of the workshop, an attempt to clarify the relevance of the constraints that participants adopt during its curse. Here, I’m talking about the way in which climate change has driven contemporary human thought through a perpetual shifting.
+
+The current state of ecological emergency, unveiled a time where massive non-human entities distributed in time and space make decisive contact with humans, threatening to end important human concepts such as world, horizontal nature and environment. Global warming is perhaps the most dramatic example of what Timothy Morton calls “Hyperobjects” – entities of such vast temporal and spatial dimensions that they defeat traditional ideas about what a thing is in the first place.
+The exploration of terrestrial systems and the technification of Earth resources have been vital for human development throughout history, which in turn have high impact in Earth’s biosphere integrity.
+The development of agriculture allowed humans to manipulate other species for their own use, animals as well as plants. Such developments meant that humans no longer had the need to belong to any particular ecosystem, allowing an exponential increase and spread of the human population across Earth, causing a wave of extinctions across. With Earth’s landscape profoundly modified the widespread extraction and adoption of fossil fuel materialised by the Industrial Revolution had an unprecedented impact on Earth’s equilibrium, igniting a massive change leading to the beginning of we describe today as the ecological crisis.
+This era, the Time of Hyperobjects, ignited a shift of the centre of the world away from the human realm, forcing humans to see themselves from a third-person perspective, making it impossible to archive a final distance towards the world. Such understanding allow us to think about the effects that live outside the human perceptual bubble and opens up for a new understanding of ecology.
+Ecological discourse in the mainstream has long been a polarising topic, with a big part focusing on the hope to return to the old stable ecosystem (Naturalism) and the vision of the dystopian future (Post-apocalyptic). These two ideas focus on two very distinct extremes however I believe that neither of these perspectives are completely true.
+What we mean by Nature, as a healthy pure state, aroused at the start of the geological period Holocene, which is marked by stable Earth system fluctuations. Nature is defined as an harmonious periodic cycle, therefore it eliminates the possibility of the concept Nature before Nature. If we believe in Nature before Nature then we have to accept that Nature is not something that is pure or untouched as it is often suggested. A truly natural state is certainly not the not that is represented by the concept Nature.
+This idea inevitably brings a problem to the ecological discourse based on Naturalist and/or Post-apocalyptic aesthetics. Commonly Naturalism suggests a return to nature, suggesting that a natural state can be somewhat be regained, that a well balanced world is the one not disturbed by humans. It portraits the modern human as a cancerous entity which leads to phantasies on what the world might end up, or look like.
+This fascination for the Post-apocalyptic is something familiar to most lovers of fiction. The world which we are presented is both different to anything one has ever experience, yet familiar enough to recognise. Within is paradigm, the genuine treats to human existence become a caricature, they are often exaggerated and driven by aesthetics.
+To analyse this two concepts further we can use the concept of Uncanny Valley introduced by Masashiro Mori’s, as it proposes a relation between the human likeness of an entity and the perceiver’s affinity for it. Frequently used in Robotics and CGI, this concept states that as closer as an android resembles a human the more frightening it appears towards humans. Using this analogy it is possible to place Naturalism as occupying the healthy state, while on the other end Post-apocalyptic represents the zombie and uncanny state. What is interesting here is not necessary to reveal this two extremes but to understand that the only aspect that is holding such concept is the human. As the valley is what separates the human and the non-human worlds. Without the human there is simply no use for this concept as it can only be used in close connection to the feelings or perception of the human. However if ecological awareness consists of a greater intimacy with a vast number of beings that humans are incapable of thinking or perceiving, it also opens to new possibilities.
+In the game Last of Us, players traverse a post-apocalyptic environments in their quest to survive in a world where hostile humans and cannibalistic creatures live. This action-adventure game played from a third-person perspective highlights a key condition, here, the treats to human existence provide the backdrop to the action that you (the surviver) is witnessing. Such aesthetic experience positions reality in the world of fiction as there is a distance that it is created which projects in the future what one cannot endure as something that has already occurred, or that is happening right now.
+
+This idea of position reality in the world of fiction is something interesting to me. My method however, attempts to reverse this paradigm by position fiction in reality.
+In the workshop an initial narrative was given and participants where asked to design a scenario, an avatar and a set of clues which this avatar had navigate in order to escape this scenario. The particularity of this workshop was not so focus on the aspect role-playing and world building but the tool in which the main player experience the game. 
+During the course of play, the main player, wearing a VR headset and portraying the avatar designed by the group, could only navigate via the two viewpoints given by the cameras installed in the room, from which the player could switch using the headset. 
+Different from the traditional third-person gameplay, this game allowed players to use their own body as a console controller, open an ability to experience a distance of their own body and developing an uncanny awareness of their own movements and actions and positioning their own selves in the world of fiction. Allowing a sociological and physical distance between themselves player and their character.
+
+I would like to end by express my gratitude to the Hackers&Designers team and the participants for their willingness, enthusiasm and engagement. I couldn’t have hoped for better setting for the first tryout of this idea which I intend further explore in the realm of performance.
+
+
+Figures:
+
+
+
+
+  
+
+Masahiro Mori’s diagram of the Uncanny Valley 
+
+
+
+
+  
+
+Surroundings (left) and environment (right) of the sea Urchin by Jakob von Uexküll from A Foray into the Worlds of Animals and Humans 
+
+
+
+
+
+
+Biography:
+Greenfort, Tue. "STATE OF NATURE: Uncertainty in Environmental Emergency." 15 November 2014. DIS Magazine. Ed. Sarah Lookofsky. 30 November 2015 <http://dismagazine.com/discussion/68076/state-of-nature-raging-with-uncertainty-in-an- environmental-emergency/>. 
+
+
+Harman, Graham. "Magic Uexküll." Acts, Sonic. Living Earth - Field Notes from the Dark Ecology Project 2014 - 2016. Ed. Sonic Acts and Mirna Belina. Amsterdam: Sonic Acts Press, 2016. 
+
+
+Meillassoux, Quentin. After Finitude: An Essay on the Necessity of Contingency. Trans. Ray Brassier. London: Bloomsbury Academic , 2010.
+
+
+Morton, Timothy. Dark Ecology: For a Logic of Future Coexistence. New York: Columbia University Press, 2016. 
+—. Hyperobjects: Philosophy and Ecology after the End of the World. Minneapolis: University of Minnesota Press, 2013. 
+
+
+Newbold, Tim, et al. Has land use pushed terrestrial biodiversity beyond the planetary boundary? A global assessment. Scientific Report. Cambridge, UK: Science Magazine, 2016. 
+
+
+Uexküll, Jakob von. A Foray into the Worlds of Animals and Humans with A Theory of Meaning. Trans. Joseph D. O'Neil. Minneapolis: University of Minnesota Press, 2010.

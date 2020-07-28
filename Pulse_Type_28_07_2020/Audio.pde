@@ -1,3 +1,17 @@
+// S O U N D
+AudioIn input;
+Amplitude loudness;
+Waveform waveform;
+float[] minMax = new float[2];
+float avgVol = 0, volume;
+boolean analyseVolume = false;
+boolean analysisRunning = false;
+int volCount=0;
+boolean[] wordVolAnalysed, bpmSwitched;
+
+// Define how many samples of the Waveform you want to be able to read at once
+int samples = 100;
+
 void initAudio() {
   // Create an Audio input and grab the 1st channel
   input = new AudioIn(this);
@@ -10,6 +24,10 @@ void initAudio() {
 
   // Patch the input to the volume analyzer
   loudness.input(input);
+  
+    // Create the Waveform analyzer and connect the playing soundfile to it.
+  waveform = new Waveform(this, samples);
+  waveform.input(input);
 
   //minMax = calibrateAudio(1000); 
   minMax[0] = 0.001;

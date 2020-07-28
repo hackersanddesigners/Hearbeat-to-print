@@ -1,7 +1,11 @@
-// SELECTING FOLDERS AND LOADING FILES
+import java.util.Calendar;
+
+// SELECTING FOLDERS AND LOADING FILES ETC.
 
 boolean fontsLoaded = false;
 boolean textLoaded = false;
+String fileName;
+String projectName;
 
 void mainFolder(File selection) {
   if (selection == null) {
@@ -9,20 +13,27 @@ void mainFolder(File selection) {
   } else {
     println("User selected " + selection.getAbsolutePath()); 
     println();
-    
+    // get root folder name and set as projectName
+    String[] temp = selection.getAbsolutePath().split("/");
+    projectName = temp[temp.length-1];
+
     // loading fonts from folder
     headFNames = loadFontNames(selection.getAbsolutePath(), "head");
     println("Available head fonts:");
-    printArray(headFNames); println();
+    printArray(headFNames); 
+    println();
     headFonts = initFonts(headFNames);
     bodyFNames = loadFontNames(selection.getAbsolutePath(), "body");
     println("Available body fonts:");
-    printArray(bodyFNames); println();
+    printArray(bodyFNames); 
+    println();
     bodyFonts = initFonts(bodyFNames); 
-    
-    loadText(selection.getAbsolutePath());
-    
+
+    fileName = findText(selection.getAbsolutePath());
+    fileName = fileName.split(".txt")[0];
+
     println("Switching to head fonts:");
+    fontBank = 2;
     initFonts(headFNames);
   }
   // selectInput("Select text file.", "loadFile");
@@ -30,9 +41,10 @@ void mainFolder(File selection) {
 
 
 
-void loadText(String path) {
+String findText(String path) {
   //println("Listing all filenames in a directory: ");
   String[] filenames = listFileNames(path);
+  String name = "";
   // printArray(filenames);
   File[] files = listFiles(path);
   for (int i = 0; i < files.length; i++) {
@@ -40,14 +52,16 @@ void loadText(String path) {
     if (!f.isDirectory() && f.getName().equals(".DS_Store") == false) {
       println("Text file " + f.getName() + " loaded.");
       loadFile(f);
+      name=f.getName();
       break;
     }
   }
+  return name;
 }
 
 
 void loadFile(File selection) {
-  println("U selected " + selection.getAbsolutePath()); 
+  //println("Text file loaded: " + selection.getAbsolutePath()); 
   String [] lines = loadStrings(selection.getAbsolutePath()); 
   loadedText = lines; 
   println("There are " + lines.length + " lines"); 
@@ -55,7 +69,8 @@ void loadFile(File selection) {
     words.append(0);
     totalWords+=loadedText[i].split(" ").length;
   }
-  println("There are " + totalWords + " words in total."); println();
+  println("There are " + totalWords + " words in total."); 
+  println();
   wordPDF = new boolean[totalWords];
   wordVolAnalysed = new boolean[totalWords*3];
   bpmSwitched = new boolean[totalWords*3];
@@ -117,4 +132,9 @@ File[] listFiles(String dir) {
     // If it's not a directory
     return null;
   }
+}
+
+String timestamp() {
+  Calendar now = Calendar.getInstance();
+  return String.format("%1$ty%1$tm%1$td_%1$tH%1$tM%1$tS", now);
 }

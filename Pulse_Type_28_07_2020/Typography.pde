@@ -4,10 +4,10 @@ String[] fontNames = {"CirrusCumulus", "Coconat", "Compagnon", "Halibut Serif",
 String[] bodyFNames={}, headFNames={};
 PFont myFont;
 PFont[] myFonts = new PFont[fontNames.length];
-PFont[] headFonts, bodyFonts;
-int fontSelection = 0;
-int minFont, maxFont;
-boolean headFont = true;
+PFont[] headFonts, bodyFonts, footFonts;
+int fontSelection = 0, fontBank = 0;
+int minFont, maxFont, minFontHead, maxFontHead, minFontFoot, maxFontFoot;
+//boolean headFont = true;
 
 //called when switching fonts
 PFont[] initFonts(String[] fontNames) {
@@ -27,16 +27,21 @@ PFont[] initFonts(String[] fontNames) {
   return tempFonts;
 }
 
-void switchFontBank() {
-  int tempRandom;
+void switchFontBank(int bank) {
+  int tempRandom=0;
+  if (bank > 2) { // for font switching with key
+    fontBank++;
+    if (fontBank>=3) fontBank=0;
+  } else fontBank = bank;
+  println(fontBank);
   //seedling = int(random(99999999)); 
   //randomSeed(seedling);
-  if (headFont) {
-    println("Switching to body fonts!");
+  if (fontBank==1 || fontBank==0) {
+    println("Switching to foot/body fonts!");
     randomSeed(int(random(millis())));
     tempRandom = int(random(bodyFonts.length));
     println("Selected font: " + bodyFNames[tempRandom]);
-  } else {
+  } else if (fontBank==2) {
     println("Switching to head fonts!");
     randomSeed(int(random(millis())));
     tempRandom = int(random(headFonts.length));
@@ -46,9 +51,8 @@ void switchFontBank() {
   //emptyLineCount = 0;
   //if (headFont) initFonts(bodyFNames);
   //else initFonts(headFNames);
-  headFont = !headFont;
   // 1 = headfont, 0 = bodyfont
-  wordFontBank.set(wordCount, int(headFont));
+  wordFontBank.set(wordCount, fontBank);
   wordFont.set(wordCount, tempRandom);
 }
 
@@ -56,7 +60,7 @@ void switchFont() {
   //seedling = int(random(99999999)); 
   int tempRandom = wordFont.get(wordCount);
   // make sure we get a different font than currently selected
-  if (wordFontBank.get(wordCount) == 1) {
+  if (wordFontBank.get(wordCount) == 2) {
     println("head fonts.");
     //printArray(headFonts);
     while (wordFont.get(wordCount) == tempRandom) {
@@ -66,7 +70,7 @@ void switchFont() {
   } else {
     //printArray(bodyFonts);
     while (wordFont.get(wordCount) == tempRandom) {
-    //  println(tempRandom);
+      //  println(tempRandom);
       randomSeed(int(random(millis())));
       tempRandom = int(random(bodyFonts.length));
     }

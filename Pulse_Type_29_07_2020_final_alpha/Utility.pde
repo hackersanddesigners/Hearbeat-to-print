@@ -136,5 +136,5 @@ File[] listFiles(String dir) {
 
 String timestamp() {
   Calendar now = Calendar.getInstance();
-  return String.format("%1$ty%1$tm%1$td_%1$tH%1$tM%1$tS", now);
+  return String.format("%1$td_%1$tm_%1$ty_%1$tH_%1$tM_%1$tS", now);
 }

@@ -9,6 +9,8 @@ boolean analysisRunning = false;
 int volCount=0;
 boolean[] wordVolAnalysed, bpmSwitched;
 
+SoundFile soundfile; // for end of document sound
+
 // Define how many samples of the Waveform you want to be able to read at once
 int samples = 100;
 
@@ -35,7 +37,7 @@ void initAudio() {
 }
 
 // also analyses BPM!
-void analyseVolume(String word) {
+void analyseVolumeBPM() {
   if (analyseVolume) {
     if (analysisRunning) {
       avgVol += volume;
@@ -55,7 +57,7 @@ void analyseVolume(String word) {
     if (analysisRunning && !wordVolAnalysed[wordCount]) {
       wordVolume.set(wordCount, avgVol);
       wordBPM.set(wordCount, avgBPM);
-      println("analysis finished: " + avgVol + ", " + avgBPM + ": " + word);
+      println("analysis finished: " + avgVol + ", " + avgBPM);
       //if (wordCount > 0) {
       //  float diff =  abs(wordBPM.get(wordCount-1) - wordBPM.get(wordCount));
       //  // println("BPM diff: " + diff);

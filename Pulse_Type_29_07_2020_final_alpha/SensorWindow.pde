@@ -21,7 +21,7 @@ class SensorWindow extends PApplet {
   }
   public void setup() { 
     surface.setTitle("Sensor Data");
-    surface.setLocation(0, displayHeight/2-height/2);
+    surface.setLocation(0, 0);
     surface.setResizable(true);
     scaledY = new int[width/xZoom];       // initialize scaled pulse waveform array
     rawY = new int[width/xZoom];          // initialize raw pulse waveform array
@@ -29,14 +29,14 @@ class SensorWindow extends PApplet {
 
   public void draw() {
     // background with alpha
-    fill(255, 60);
+    fill(red(back), green(back), blue(back), 60);
     noStroke();
     // background of bpm text
     rect(0, 0, width, height);
-    fill(255);
+    fill(back);
     rect(ws, height-40, 80, height/20);
     // bpm text
-    fill(0);
+    fill(fore);
     textSize(height/20);
     // textFont(myFonts[round(random (myFonts.length-1))]);
     text(BPM + " BPM", ws, height-20);
@@ -62,7 +62,7 @@ class SensorWindow extends PApplet {
       scaledY[i] = constrain(int(dummy), ws, height-ws);   // transfer the raw data array to the scaled array
     }
     noFill();
-    stroke(25, 200, 200);             
+    stroke(wave);             
     beginShape();  //using beginShape() renders fast
     for (int x = 0; x < scaledY.length-1; x++) {
       float xPos=map(x, 0, width/xZoom, ws, width-ws);

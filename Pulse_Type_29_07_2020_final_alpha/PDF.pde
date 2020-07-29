@@ -15,12 +15,13 @@ void initPDF() {
     String pdfName = sketchPath() + "/pdfs/" + projectName +"_" + timestamp() + ".pdf";
     pdf = (PGraphicsPDF) createGraphics(width, height, PDF, pdfName);
     pdf.beginDraw();
-    pdf.textMode(SHAPE);
+    //pdf.textMode(SHAPE);
     pdf.textAlign(LEFT, CENTER);
     beganPDF = true;
     println();
     println("PDF file created.");
     println(pdfName);
+   // page = 0; // reset page counter 
   }
 }
 
@@ -39,8 +40,10 @@ void writePDF(int page) {
   pdfFont = myFont; // just initializing
   // also check if page has not been already written to pdf
   if (beganPDF && page > writtenPages) {
-    int currentWord = 1;
+    println("pdf page: " + page);
+    int currentWord = 0;
     for (int line = 0; line <= currentLine; line++) { // step through lines until current one
+      currentWord++;
       String[] lineWords = loadedText[line].split(" "); 
       //maxLineH.get(nextLine);
       for (int word=0; word < words.get(line); word++) { // step through words of lines
@@ -55,7 +58,7 @@ void writePDF(int page) {
               pdfFont = bodyFonts[wordFont.get(currentWord)];
             }
             pdf.textFont(pdfFont);
-            pdf.textAlign(LEFT, CENTER);
+            pdf.textAlign(LEFT, alignment);
             //float s = map(wordVolume.get(currentWord), minMax[0], minMax[1], minF, maxF);
             //s = constrain(s, minF, maxF);
             float pdfFontSize = wordFontSize.get(currentWord);
@@ -68,11 +71,11 @@ void writePDF(int page) {
             float yPos=wordY.get(currentWord)/displayDensity();
             pdf.text(lineWords[word], xPos, yPos);
           }
+            currentWord++;
         } 
         catch (ArrayIndexOutOfBoundsException e) {
           e.printStackTrace();
         }
-        currentWord++;
       } // end words
     }  // end PDF    
     pdf.nextPage();

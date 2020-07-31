@@ -15,8 +15,8 @@ import processing.serial.*;
 
 // PRESS R FOR NEW RANDOM FONT
 
-int pdfW = 210; // width and height of PDF
-int pdfH = 70;
+int pdfW = 140; // width and height of PDF
+int pdfH = 180;
 int alignment = CENTER; // default vertical alignment 
 int theme = 1;
 

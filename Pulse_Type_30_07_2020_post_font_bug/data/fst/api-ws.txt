@@ -1,0 +1,52 @@
+Feminist Search Tool API Workshop
+A Very Brief History of APIs and Rising of web-based APIs
+André Fincato 
+
+In computer software, API stands for Application Programming Interface. What this means is that it’s a set of available ways (pre-made software functions) to interact with a program, in order to facilitate the interaction between applications. An example could be the APIs that an Operating System (eg Linux, macOS or Windows) exposes for common operations such as printing a file: rather than asking the user to write from scratch all the necessary instructions to accomplish this, they can instead use the print function readily available and perform the task.
+
+Unlike what one might think  nowadays, APIs are not born with the web (aka web APIs such as Twitter APIs). “Historically”, they are an essential part of how software is conceived and somehow meant to be built and used.
+
+This is important, because what happened over time is that current web APIs are at the top of the stack of a multi-layered system. It roughly starts from (a) the core software that talks to the hardware (operating system’s kernel), (b) moves to where computers talk to each other through the network using specific protocols (eg TCP/IP and HTTP), (c) goes through ‘userland’ [1], where programmers can build applications for users’ needs (eg a web browser) and finally (d) reaches the layer where we use a web browser to make things on some website (an online forum, a social network, and so on).
+
+To schematise this, Web APIs need: physical computers running core software; internet industrial global infrastructure; software protocols to allow computers to talk to each other; and finally, the software that, for example, a web-app is built of.
+
+Each of these layers usually have public APIs, that can be used by other programs to interact. Sometimes public APIs can be accessed before a registration of some kind, or they might be openly accessible by default. Often, programs might also have private APIs for their own internal usage: e.g. only accessible for the people writing that software.
+
+To conclude: the most well-known and used type of web-API is the REST API architecture. REST stands for Representational state transfer. This format has been popularized during the, so called, web 2.0 period in the mid-2000s, with the rise of social network websites, where the ‘end-user’ can interact with the website by creating, reading, updating and deleting content on it (see CRUD).
+
+FST and APIs access
+
+After FST’s first experience with a subset of the Utrecht University Library catalogue, we began a collaboration with OBA library in Amsterdam. In particular we looked at their APIs to explore their rich catalogue and see what we could find in there. Not the whole OBA catalogue collection was available, but it included IHLIA’s [2] records, for which our research interests were fitting as it gave room to further complicate the process of author categorization.
+
+Exploring OBA’s APIs took shape as a series of internal, collaborative learning experiences, where I (André), would guide the rest of the group through some conversations mixed with hands-on exercises. During that process, we mapped out many of the OBA APIs’ endpoints (the url where to ask and retrieve some specific data), and outlined the way books are organized (https://wiki.feministsearchtool.nl/doku.php?id=oba_apis).
+
+This process culminated in a public workshop held at OBA (Amsterdam), focused on web APIs and the OBA’s one in particular. We briefly contextualised the history of APIs, and pointed out the main problems they often have when they are offered as public APIs from a service: full reliance on the company that offers them; full compliance to the Terms of Use without the user having any option to voice eventual problems, but only “exiting” (eg by stopping to use the service);  and the awareness that the party offering the APIs might change their plans over time as their software product evolves (after all they often are for-profit company).
+
+During the web 2.0 web APIs bubble, this relationship between software providers with open APIs and third party programmers created many situations where the most interesting way to use web 2.0 services was through one of the third-party applications—usually developed independently by some programmers. Eventually the APIs would be restricted, the third-party app would be bought by the company and replaced as their ‘main way’ to access the service.
+
+While this might sound as a good way to scout and let ferment new wild ideas for one’s company product, it shows how often this situation can turn into a moderately coercive relationship where all is good and free (free as in free API usage), until someone is outdoing the company’s own product and the company needs to get control back over it.
+
+At first sight, one can look at this situation as if it’s just the naivety of many new, young programmers. That might be. But I would like to point out that the underlying open source ethos of “let’s not talk about politics, let’s just do it”, is lazily assuming everyone is operating in good faith. This works well when starting out something small, but ends up very badly when the weekend project a “hacker” made is used by a lot of people and is dependent on the benevolence of some company allowing the usage of their APIs. Therefore, the situation is more complex than simple programmers’ naivety: in my opinion it lies in the constant flirting between big companies sponsoring open-source projects, and the unclear relationship that this takes over time between these companies and the programmers who benefit from them.
+
+During the workshop, we first played out an exercise about ‘inventing a protocol’, mirroring the basic REST verbs: GET (retrieve resource); HEAD (check type of data without retrieving it); POST (send data); PUT (create a new resource); DELETE (delete a resource); TRACE (check if any change has been made); OPTIONS (check what kind of options the server allows in terms of API usage); CONNECT (pass current connection to a different one, eg from http to https); and PATCH (apply partial modification to a resource).
+This was a physical exercise where participants, in groups of 2, used the library’s multi-story building to write and act out a simple script (a series of actions / operations) using the above REST verbs, and then performed it. Afterwards, we shared our experiences and through this we got accustomed to web APIs basic operations.
+In the afternoon, we explored OBA’s online catalogue with some pre-made simple python scripts that would download different types of data (querying a book, a publisher’s list of books, a book’s cover image, etc). We then analysed the results all together, by commenting it through, starting from the data structure and seeing how each record was shaped. This spurred conversations around data categorization, and in particular the clear, ongoing mismatch between human identities and their database counterpart. Less in terms of “it’s entirely useless”, and more in asking what is actually useful to keep track of in relation to an individual.
+
+
+Limits and Potentials of web APIs
+
+Are web APIs any useful? Sure, if you are mainly interested in retrieving data that they provide. By using them as read-only databases, you are taking a low-risk approach. If at some point they will stop working—either the service shut down, or they changed their API policy (for example you need to sign-up and pay a fee)—then it might be enough to find another source for that data. If not, you become aware that your project was dependent on that web-service, and hopefully you took that into account and can find something else.
+
+Another story would be if you were using a web-service API to build an app to interact with that service, which usually entails also adding writing capabilities. In the case that something changes in the APIs and your app broke, what do you do? Your project is entirely vulnerable to the choices made by the service provider you are using, often with little space for dialogue.
+
+This makes it clear that, unless you can either build your own web-service or self-host the software you need to use and be a bit more in control of their APIs, you cannot decide which type of user to be with that web-service. Your interaction with them is pretty much subservient.
+
+The limits and potentials of web APIs lies less in protocols and software architecture, and almost entirely in user relationships. The thing is that, when using web-APIs that you have almost no control of or say in, the relationship is not one of user-to-user, but one of service-to-user. A service is not just a user who also runs the necessary software to allow any other user to use the application. A service is another type of entity, which gives you access to something, as long as you agree with their Terms of Service.
+
+A service provider, often a company, does what they need to run their business. This creates a type of very unclear relationship, where the service provider might be fostering an ecosystem of smaller apps built around their APIs, almost acting as a community-led open-source project, yet being in the position of effectively taking all the good fruits from it when the time comes.
+
+So what to do? Treat web-APIs, whether open or closed source, as disposable sources of data.
+
+
+[1] “Userland usually refers to the various programs and libraries that the operating system uses to interact with the kernel: software that performs input/output, manipulates file system objects, application software, etc.” See https://en.m.wikipedia.org/wiki/User_space
+[2] “IHLIA is an international archive and documentation center on homosexuality, bisexuality and transgender”. See https://www.ihlia.nl/?lang=en

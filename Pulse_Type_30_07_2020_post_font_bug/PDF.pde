@@ -37,7 +37,7 @@ void endPDF(int page) {
 }
 
 void writePDF(int page) {
-  pdfFont = myFont; // just initializing
+ // pdfFont = myFont; // just initializing
   // also check if page has not been already written to pdf
   if (beganPDF && page > writtenPages) {
     println("pdf page: " + page);
